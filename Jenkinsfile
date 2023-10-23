@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage("checkout"){
-            steps {
-                git branch: 'main', url: 'https://github.com/theargenator45/course3-jenkins-gs-spring-petclinic'
-            }
-        }
         stage("build"){
             steps {
                 bat "mvnw.cmd package"
